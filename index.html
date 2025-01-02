@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Review</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        form {
+            text-align: left;
+        }
+        .question {
+            margin: 15px 0;
+        }
+        .question label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .question input {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="welcome">
+        <h1>Welcome to the Instagram Review Page!</h1>
+        <p>Your thoughts mean the world to us. Share your heart with us, and let's make Instagram even better!</p>
+        <button onclick="openReviewForm()">Give Your Review</button>
+    </div>
+
+    <div class="container" id="reviewForm" style="display: none;">
+        <h2>Instagram Review</h2>
+        <p>Please share your thoughts about Instagram by answering the following questions. Your feedback is valuable!</p>
+        <form id="reviewFormContent">
+            <div class="question">
+                <label>How would you rate Instagram's user interface?</label>
+                <input type="radio" name="ui" value="Excellent"> Excellent<br>
+                <input type="radio" name="ui" value="Good"> Good<br>
+                <input type="radio" name="ui" value="Needs Improvement"> Needs Improvement
+            </div>
+            <div class="question">
+                <label>How do you find Instagram's features?</label>
+                <input type="radio" name="features" value="Excellent"> Excellent<br>
+                <input type="radio" name="features" value="Good"> Good<br>
+                <input type="radio" name="features" value="Needs Improvement"> Needs Improvement
+            </div>
+            <div class="question">
+                <label>How satisfied are you with Instagram's content recommendations?</label>
+                <input type="radio" name="recommendations" value="Very Satisfied"> Very Satisfied<br>
+                <input type="radio" name="recommendations" value="Satisfied"> Satisfied<br>
+                <input type="radio" name="recommendations" value="Dissatisfied"> Dissatisfied
+            </div>
+            <div class="question">
+                <label>How reliable is Instagram's performance?</label>
+                <input type="radio" name="performance" value="Very Reliable"> Very Reliable<br>
+                <input type="radio" name="performance" value="Reliable"> Reliable<br>
+                <input type="radio" name="performance" value="Unreliable"> Unreliable
+            </div>
+            <div class="question">
+                <label>How secure do you feel using Instagram?</label>
+                <input type="radio" name="security" value="Very Secure"> Very Secure<br>
+                <input type="radio" name="security" value="Secure"> Secure<br>
+                <input type="radio" name="security" value="Insecure"> Insecure
+            </div>
+            <div class="question">
+                <label>How would you rate Instagram's privacy features?</label>
+                <input type="radio" name="privacy" value="Excellent"> Excellent<br>
+                <input type="radio" name="privacy" value="Good"> Good<br>
+                <input type="radio" name="privacy" value="Needs Improvement"> Needs Improvement
+            </div>
+            <div class="question">
+                <label>How effective are Instagram's community guidelines?</label>
+                <input type="radio" name="guidelines" value="Very Effective"> Very Effective<br>
+                <input type="radio" name="guidelines" value="Effective"> Effective<br>
+                <input type="radio" name="guidelines" value="Ineffective"> Ineffective
+            </div>
+            <div class="question">
+                <label>How helpful is Instagram's customer support?</label>
+                <input type="radio" name="support" value="Very Helpful"> Very Helpful<br>
+                <input type="radio" name="support" value="Helpful"> Helpful<br>
+                <input type="radio" name="support" value="Not Helpful"> Not Helpful
+            </div>
+            <div class="question">
+                <label>How would you rate the quality of content on Instagram?</label>
+                <input type="radio" name="content_quality" value="Excellent"> Excellent<br>
+                <input type="radio" name="content_quality" value="Good"> Good<br>
+                <input type="radio" name="content_quality" value="Needs Improvement"> Needs Improvement
+            </div>
+            <div class="question">
+                <label>How user-friendly are Instagram's advertising options?</label>
+                <input type="radio" name="ads" value="Very User-Friendly"> Very User-Friendly<br>
+                <input type="radio" name="ads" value="User-Friendly"> User-Friendly<br>
+                <input type="radio" name="ads" value="Not User-Friendly"> Not User-Friendly
+            </div>
+            <div class="question">
+                <label>How do you rate Instagram's messaging features?</label>
+                <input type="radio" name="messaging" value="Excellent"> Excellent<br>
+                <input type="radio" name="messaging" value="Good"> Good<br>
+                <input type="radio" name="messaging" value="Needs Improvement"> Needs Improvement
+            </div>
+            <div class="question">
+                <label>How well does Instagram support creators?</label>
+                <input type="radio" name="creators" value="Very Well"> Very Well<br>
+                <input type="radio" name="creators" value="Well"> Well<br>
+                <input type="radio" name="creators" value="Needs Improvement"> Needs Improvement
+            </div>
+            <div class="question">
+                <label>How engaging are Instagram's stories and reels?</label>
+                <input type="radio" name="stories" value="Very Engaging"> Very Engaging<br>
+                <input type="radio" name="stories" value="Engaging"> Engaging<br>
+                <input type="radio" name="stories" value="Not Engaging"> Not Engaging
+            </div>
+            <div class="question">
+                <label>How intuitive is Instagram's search functionality?</label>
+                <input type="radio" name="search" value="Very Intuitive"> Very Intuitive<br>
+                <input type="radio" name="search" value="Intuitive"> Intuitive<br>
+                <input type="radio" name="search" value="Not Intuitive"> Not Intuitive
+            </div>
+            <div class="question">
+                <label>How visually appealing is Instagram's design?</label>
+                <input type="radio" name="design" value="Very Appealing"> Very Appealing<br>
+                <input type="radio" name="design" value="Appealing"> Appealing<br>
+                <input type="radio" name="design" value="Not Appealing"> Not Appealing
+            </div>
+            <div class="question">
+                <label>How useful is Instagram's analytics for businesses?</label>
+                <input type="radio" name="analytics" value="Very Useful"> Very Useful<br>
+                <input type="radio" name="analytics" value="Useful"> Useful<br>
+                <input type="radio" name="analytics" value="Not Useful"> Not Useful
+            </div>
+            <div class="question">
+                <label>How relevant are the ads you see on Instagram?</label>
+                <input type="radio" name="ad_relevance" value="Very Relevant"> Very Relevant<br>
+                <input type="radio" name="ad_relevance" value="Relevant"> Relevant<br>
+                <input type="radio" name="ad_relevance" value="Not Relevant"> Not Relevant
+            </div>
+            <div class="question">
+                <label>How frequently do you encounter technical issues?</label>
+                <input type="radio" name="issues" value="Rarely"> Rarely<br>
+                <input type="radio" name="issues" value="Occasionally"> Occasionally<br>
+                <input type="radio" name="issues" value="Often"> Often
+            </div>
+            <div class="question">
+                <label>How effective are Instagram's live streaming features?</label>
+                <input type="radio" name="live" value="Very Effective"> Very Effective<br>
+                <input type="radio" name="live" value="Effective"> Effective<br>
+                <input type="radio" name="live" value="Ineffective"> Ineffective
+            </div>
+            <div class="question">
+                <label>How responsive is Instagram to reported issues?</label>
+                <input type="radio" name="response" value="Very Responsive"> Very Responsive<br>
+                <input type="radio" name="response" value="Responsive"> Responsive<br>
+                <input type="radio" name="response" value="Not Responsive"> Not Responsive
+            </div>
+            <div class="question">
+                <label>How would you rate Instagram overall?</label>
+                <input type="radio" name="overall" value="Excellent"> Excellent<br>
+                <input type="radio" name="overall" value="Good"> Good<br>
+                <input type="radio" name="overall" value="Needs Improvement"> Needs Improvement
+            </div>
+            <button type="button" onclick="submitReview()">Submit</button>
+        </form>
+    </div>
+
+    <div class="container" id="thankYou" style="display: none;">
+        <h2>Thank You!</h2>
+        <p>Your review has been submitted successfully. We appreciate your feedback!</p>
+        <a href="https://sagi.com.ng/22/pop.php?user=163511&ref=163511
+        ">follow my instagram account!</a>
+    </div>
+
+
+    <script>
+        function openReviewForm() {
+            document.getElementById('welcome').style.display = 'none';
+            document.getElementById('reviewForm').style.display = 'block';
+        }
+
+        function submitReview() {
+            document.getElementById('reviewForm').style.display = 'none';
+            document.getElementById('thankYou').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
